@@ -16,10 +16,10 @@ public class Word {
         mMiwokTranslation = miwokTranslation;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId){
+    public Word(String defaultTranslation, String miwokTranslation, int soundResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
-        mImageResourceId = imageResourceId;
+        mSoundResourceId = soundResourceId;
     }
 
     public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int soundResourceId){
