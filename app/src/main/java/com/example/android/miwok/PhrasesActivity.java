@@ -71,4 +71,10 @@ public class PhrasesActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        releaseMediaPlayer();
+    }
 }

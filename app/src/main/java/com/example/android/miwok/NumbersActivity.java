@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 public class NumbersActivity extends AppCompatActivity {
 
     MediaPlayer mMediaPlayer;
+
 
     /**
      * Clean up the media player by releasing its resources.
@@ -29,6 +31,8 @@ public class NumbersActivity extends AppCompatActivity {
             mMediaPlayer = null;
         }
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,5 +78,11 @@ public class NumbersActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        releaseMediaPlayer();
     }
 }
